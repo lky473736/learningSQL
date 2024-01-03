@@ -1,0 +1,24 @@
+/*  
+	query : 질의어
+	SQL : 구조적 질의어 (DBMS를 관리하기 위한 언어)
+*/
+
+CREATE TABLE 학생정보 (
+	학번 INTEGER NOT NULL, -- 열이름, 저장공간 형태, 값의 허용, 구분값
+	이름 TEXT, -- 열이름, 저장공간 형태, 구분값
+	연락처 TEXT, -- 열이름, 저장공간 형태, 구분값
+	PRIMARY KEY (학번) -- key
+);
+
+/*
+	NOT NULL : 빈칸을 허용하지 않음 (반드시 값 입력해야 함)
+	
+	INTEGER : 정수
+	REAL : 실수
+	TEXT : 문자열
+*/
+
+-- INSERT INTO 테이블명 VALUES (attribute에 맞게끔 compo 입력);
+INSERT INTO 학생정보 VALUES (20200001, '김가천', '010-1234-5678');
+INSERT INTO 학생정보 VALUES (20200002, '김철수', '010-2345-6789');
+INSERT INTO 학생정보 VALUES (20200003, '김영희', '010-3456-7890');
