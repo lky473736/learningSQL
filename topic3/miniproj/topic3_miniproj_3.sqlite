@@ -1,0 +1,15 @@
+CREATE TABLE 대학원리스트업
+(
+	이름 TEXT NOT NULL,
+	희망학력 TEXT NOT NULL,
+	가고싶은정도 INTEGER
+);
+
+INSERT INTO 대학원리스트업 VALUES ("서울대학교 대학원", "석사? 석박사?", 100);
+INSERT INTO 대학원리스트업 VALUES ("고려대학교 대학원", "석사? 석박사?", 90);
+INSERT INTO 대학원리스트업 VALUES ("KAIST 대학원", "석사? 석박사?", 90);
+INSERT INTO 대학원리스트업 VALUES ("서강대학교 대학원", "석사", 90);
+INSERT INTO 대학원리스트업 VALUES ("UST", "석사", 50);
+INSERT INTO 대학원리스트업 VALUES ("서울시립대학교 대학원", "석사? 석박사?", 70);
+INSERT INTO 대학원리스트업 VALUES ("가천대학교 대학원", "학석사연계?", 40);
+INSERT INTO 대학원리스트업 VALUES ("대학원 안가기", "미정", 100);
