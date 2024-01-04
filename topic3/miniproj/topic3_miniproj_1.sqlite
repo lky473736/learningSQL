@@ -1,0 +1,8 @@
+CREATE TABLE 주식창(
+	주식명 TEXT NOT NULL,
+	현재주가 REAL NOT NULL,
+	거래량 REAL NOT NULL);
+	
+INSERT INTO 주식창 VALUES ('삼성전자', 76600, 1.1526);
+INSERT INTO 주식창 VALUES ('카카오', 57200, 0.8);
+INSERT INTO 주식창 VALUES ('포스코홀딩스', 469500, 0.477);
