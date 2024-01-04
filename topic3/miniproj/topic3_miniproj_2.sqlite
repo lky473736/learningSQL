@@ -1,0 +1,11 @@
+CREATE TABLE 내가가고싶은회사모음 (
+	이름 TEXT NOT NULL,
+	재택근무여부 REAL NOT NULL,
+	가고싶은정도 INTEGER NOT NULL);
+	
+INSERT INTO 내가가고싶은회사모음 VALUES ('토스', 1, 100);
+INSERT INTO 내가가고싶은회사모음 VALUES ('LG에릭슨', 1, 1000);
+INSERT INTO 내가가고싶은회사모음 VALUES ('카카오엔터프라이즈', 0.5, 100);
+INSERT INTO 내가가고싶은회사모음 VALUES ('엔진스튜디오', 0.5, 1000);
+INSERT INTO 내가가고싶은회사모음 VALUES ('네이버랩스', 0, 1000000);
+INSERT INTO 내가가고싶은회사모음 VALUES ('돈많고재택근무되는곳', 1, 1000000000000000000000000000);
