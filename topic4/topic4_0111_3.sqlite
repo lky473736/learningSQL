@@ -1,0 +1,13 @@
+-- UPDATE : 수정하기
+-- UPDATE 테이블이름 SET 속성명 = 변경할 내용 WHERE 조건;
+
+-- 인사기록 테이블에서 20190001이 사번인 tuple의 부서를 인사팀으로, 직위를 과장으로 수정
+UPDATE 인사기록 SET 부서 = '인사팀', 직위 = '과장' WHERE 사번 = 20190001;
+SELECT * FROM 인사기록;
+
+-- DELETE : 삭제하기
+-- DELETE FROM 테이블이름 WHERE 조건;
+
+-- 인사기록 테이블에서 사번이 20190001인 tuple을 삭제
+DELETE FROM 인사기록 WHERE 사번 = 20190001;
+SELECT * FROM 인사기록;
