@@ -1,0 +1,25 @@
+-- SQL 연습
+
+/*
+	CREATE TABLE 고객 (
+		고객아이디 TEXT,
+		고객이름 TEXT,
+		나이 INTEGER,
+		등급 TEXT,
+		직업 TEXT,
+		적립금 INTEGER
+	);
+
+	INSERT INTO 고객 VALUES ('apple', '김현준', 20, 'gold', '학생', 1000);
+	INSERT INTO 고객 VALUES ('banana', '정소화', 25, 'vip', '간호사', 2500);
+	INSERT INTO 고객 VALUES ('carrot', '원유선', 28, 'gold', '교사', 4500);
+	INSERT INTO 고객 VALUES ('orange', '정지영', 22, 'silver', '학생', 0);
+*/
+
+SELECT 등급 FROM 고객;
+
+SELECT * FROM 고객 WHERE 등급 = 'gold';
+
+SELECT * FROM 고객 WHERE 등급 = 'gold' and 적립금 >= 2000;
+
+SELECT 고객이름, 등급, 적립금 FROM 고객;
