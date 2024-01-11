@@ -1,0 +1,29 @@
+CREATE TABLE 개인정보 (
+	사번 INTEGER NOT NULL, -- 열이름, 저장공간 형태, 값의 허용, 구분값
+	이름 TEXT, -- 열이름, 저장공간 형태, 구분값
+	주소 TEXT, -- 열이름, 저장공간 형태, 구분값
+	연락처 TEXT, -- 열이름, 저장공간 형태, 구분값
+	PRIMARY KEY (사번) -- key
+);
+
+CREATE TABLE 인사기록(
+	사번 INTEGER NOT NULL,
+	부서 TEXT, 
+	직위 TEXT, 
+	급여 INTEGER, 
+	수당 INTEGER,
+	점수 INTEGER,
+	PRIMARY KEY(사번)
+);
+
+INSERT INTO 개인정보 VALUES (20190001, '김가천', '경기도 성남시', '010-1234-5678');
+INSERT INTO 개인정보  VALUES (20190002, '홍길동', '서울시 구로', '010-2345-6789');
+INSERT INTO 개인정보  VALUES (20190003, '박나래', '충남 아산', '010-3456-7890');
+INSERT INTO 개인정보  VALUES (20190004, '유재석', '강원도 춘천', '010-4567-8901');
+INSERT INTO 개인정보  VALUES (20190005, '강호동', '경기도 평택', '010-5678-9012');
+
+INSERT INTO 인사기록 VALUES (20190001, '전산팀', '대리', 3000000, 500000, 95);
+INSERT INTO 인사기록 VALUES (20190002, '인사팀', '부장', 5000000, 300000, 83);
+INSERT INTO 인사기록 VALUES (20190003, '경리팀', '대리', 3000000, 200000, 65);
+INSERT INTO 인사기록 VALUES (20190004, '마케팅', '과장', 4000000, 250000, 72);
+INSERT INTO 인사기록 VALUES (20190005, '전산팀', '대리', 3000000, 150000, 60);
