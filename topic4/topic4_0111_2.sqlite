@@ -1,0 +1,27 @@
+/*
+	INSERT : 입력하기
+	SELECT : 검색하기
+	UPDATE : 수정하기
+	DELETE : 삭제하기
+*/
+
+-- * : 전체 (all)
+
+-- SELECT
+SELECT * FROM 인사기록;
+SELECT 부서 FROM 인사기록;
+SELECT 부서, 직위 FROM 인사기록; 
+SELECT * FROM 인사기록 WHERE 직위='대리' and 급여 = 3000000; -- 조건 이용해서 검색 (and, or 사용 가능)
+SELECT 사번, 부서 FROM 인사기록 WHERE 급여 >= 3000000; 
+
+-- 개인정보 테이블에서 이름과 연락처만 검색
+SELECT 이름, 연락처 FROM 개인정보;
+
+-- 인사기록 테이블에서 부서가 전산팀인 자료만 검색
+SELECT * FROM 인사기록 WHERE 부서 = '전산팀';
+
+-- 인사기록 테이블에서 수당이 300000 이하인 자료만 검색
+SELECT * FROM 인사기록 WHERE 수당 <= 300000;
+
+-- 인사기록 테이블에서 점수가 70 이상인 자료의 사번과 직위를 검색 
+SELECT 사번, 직위 FROM 인사기록 WHERE 점수 >= 70;
