@@ -1,0 +1,30 @@
+CREATE TABLE 대학원리스트업
+(
+	이름 TEXT NOT NULL,
+	희망학력 TEXT NOT NULL,
+	가고싶은정도 INTEGER
+);
+
+INSERT INTO 대학원리스트업 VALUES ("서울대학교 대학원", "석사? 석박사?", 100);
+INSERT INTO 대학원리스트업 VALUES ("고려대학교 대학원", "석사? 석박사?", 90);
+INSERT INTO 대학원리스트업 VALUES ("KAIST 대학원", "석사? 석박사?", 90);
+INSERT INTO 대학원리스트업 VALUES ("서강대학교 대학원", "석사", 90);
+INSERT INTO 대학원리스트업 VALUES ("UST", "석사", 50);
+INSERT INTO 대학원리스트업 VALUES ("서울시립대학교 대학원", "석사? 석박사?", 70);
+INSERT INTO 대학원리스트업 VALUES ("가천대학교 대학원", "학석사연계?", 40);
+INSERT INTO 대학원리스트업 VALUES ("대학원 안가기", "미정", 100);
+
+-- SELECT : 검색
+SELECT * FROM 대학원리스트업;
+SELECT 이름, 대학원리스트업.가고싶은정도 FROM 대학원리스트업 WHERE 가고싶은정도 >= 60;
+SELECT 이름, MAX(가고싶은정도) FROM 대학원리스트업;
+
+-- UPDATE : 수정
+UPDATE 대학원리스트업 SET 희망학력 = '석박사' WHERE 이름 = '서울대학교 대학원';
+UPDATE 대학원리스트업 SET 희망학력 = '석사' WHERE 이름 = '고려대학교 대학원';
+UPDATE 대학원리스트업 SET 희망학력 = '석박사' WHERE 이름 = 'KAIST 대학원';
+UPDATE 대학원리스트업 SET 희망학력 = '석사' WHERE 이름 = '서울시립대학교 대학원';
+
+-- DELETE : 삭제
+DELETE FROM 대학원리스트업 WHERE 이름 = '가천대학교 대학원';
+DELETE FROM 대학원리스트업 WHERE 이름 = '대학원 안가기';
