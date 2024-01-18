@@ -1,0 +1,16 @@
+ /* 	
+	비어있는 곳 (NULL) 값이 포함된 tuple을 지우거나 그 component에 평균값을 대입 & 에러데이터 수정 : 전처리 과정
+	전처리는 기존 csv를 테이블로 불러온 후 테이블 수정하기 기능을 통해 가능
+*/
+
+SELECT COUNT(기준년도) FROM 건강검진; -- tuple 갯수 세기
+SELECT MIN(신장), MAX(신장), AVG(신장)  FROM 건강검진 WHERE 성별코드 == 1; -- 남자 키
+SELECT MIN(신장), MAX(신장), AVG(신장)  FROM 건강검진 WHERE 성별코드 == 2; -- 여자 키
+
+SELECT 성별코드, AVG(체중) FROM 건강검진 GROUP BY 성별코드;
+SELECT 성별코드, AVG(신장) FROM 건강검진 GROUP BY 성별코드;
+SELECT 성별코드, 연령대코드, AVG(신장) FROM 건강검진 GROUP BY 성별코드, 연령대코드;
+SELECT 성별코드, AVG(시력_좌), AVG(시력_우) FROM 건강검진 GROUP BY 성별코드;
+SELECT 연령대코드, AVG(체중) FROM 건강검진 GROUP BY 연령대코드 ORDER BY AVG(체중) DESC;
+SELECT 성별코드, AVG(음주여부) FROM 건강검진 GROUP BY 성별코드;
+SELECT 성별코드, AVG(체중) FROM 건강검진 GROUP BY 성별코드 ORDER BY AVG(체중) DESC;
