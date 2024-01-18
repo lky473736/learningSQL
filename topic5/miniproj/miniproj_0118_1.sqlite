@@ -1,0 +1,35 @@
+CREATE TABLE gpascore1(
+	admit INTEGER NOT NULL,
+	gre INTEGER NOT NULL,
+	gpa REAL NOT NULL,
+	ranknum REAL NOT NULL,
+	id TEXT,
+	PRIMARY KEY (id)); 
+
+
+CREATE TABLE gpascore2(
+	id TEXT,
+	score_test INTEGER NOT NULL,
+	PRIMARY KEY (id));
+
+INSERT INTO gpascore1 VALUES (0,380,3.21,3, 'a');
+INSERT INTO gpascore1 VALUES (1,660,3.67,3, 'b');
+INSERT INTO gpascore1 VALUES (1,800,4,1, 'c');
+INSERT INTO gpascore1 VALUES (1,640,3.19,4, 'd');
+INSERT INTO gpascore1 VALUES (0,520,2.33,4, 'e');
+INSERT INTO gpascore1 VALUES (1,760,3,2, 'f');
+INSERT INTO gpascore1 VALUES (1,560,2.98,1, 'g');
+
+INSERT INTO gpascore2 VALUES ('a', 100);
+INSERT INTO gpascore2 VALUES ('b', 20);
+INSERT INTO gpascore2 VALUES ('c', 30);
+INSERT INTO gpascore2 VALUES ('d', 40);
+INSERT INTO gpascore2 VALUES ('e', 43);
+INSERT INTO gpascore2 VALUES ('f', 87);
+INSERT INTO gpascore2 VALUES ('g', 12);
+
+SELECT * FROM gpascore1;
+SELECT * FROM gpascore2;
+SELECT id, gpa, admit FROM gpascore1;
+SELECT id, admit FROM gpascore1 WHERE admit == 1 and gpa >= 3.0;
+SELECT gpascore1.admit, gpascore1.id, gpascore2.score_test FROM gpascore1, gpascore2 WHERE gpascore1.id == gpascore2.id;
